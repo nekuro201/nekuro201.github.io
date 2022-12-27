@@ -4,6 +4,8 @@ const nextConfig = {
   reactStrictMode: true,
   images:{
     domains: ['github.com'],
+    loader: "akamai",
+    path: "",
   },
 }
 
