@@ -1,14 +1,14 @@
 {
-  "homepage": "https://nekuro201.github.io/nekuro201.github.io",
+  "homepage": "http://nekuro201.github.io/nekuro201.github.io",
   "name": "web",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
     "start": "next start",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
+    "build": "react-scripts build",
     "lint": "next lint"
   },
   "dependencies": {
