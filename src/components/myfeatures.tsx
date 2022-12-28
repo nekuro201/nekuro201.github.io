@@ -20,7 +20,7 @@ export function MyFeatures(){
 
   return(
 
-    <div className='flex justify-center  gap-5'>
+    <div className='flex justify-center pt-2 gap-5'>
 
       <div className={effectHoverCircle}>
         <PhpIcon 
