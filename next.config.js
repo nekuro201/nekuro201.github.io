@@ -5,7 +5,7 @@ const nextConfig = {
   images:{
     domains: ['github.com'],
     loader: "akamai",
-    path: undefined,
+    path: "https://nekuro201.github.io/",
   },
 }
 
