@@ -4,8 +4,6 @@ const nextConfig = {
   reactStrictMode: true,
   images:{
     domains: ['github.com'],
-    loader: "custom",
-    loaderFile: "./loader.js",
   },
 }
 

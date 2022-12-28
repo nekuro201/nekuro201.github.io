@@ -27,8 +27,8 @@ export default function Home() {
       <div className="flex justify-center ">
         <div className="">
           <Image 
-            src={logoPortfolio} 
-            alt="logo" 
+            src={logoPortfolio}
+            alt="logo"
             quality={100} 
             className="w-32 md:w-72 absolute"
           />
@@ -36,7 +36,7 @@ export default function Home() {
             src={logoPortfolio} 
             alt="logo" 
             quality={100} 
-            className="w-32 md:w-80 blur-2xl opacity-40"
+            className="w-32 md:w-80 blur-2xl opacity-20"
           />
         </div>
         
@@ -58,7 +58,7 @@ export default function Home() {
 
         <div className="p-5 flex items-center">
           <Image 
-            src='nekuro201.png'
+            src='https://github.com/nekuro201.png'
             className="rounded-full w-auto h-auto max-h-[300px] shadow-gray-800 shadow-lg brightness-90" 
             width={200} 
             height={200} 
