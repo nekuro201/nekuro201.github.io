@@ -13,6 +13,7 @@ import { Project } from '../components/projetc';
 import logoPortfolio from '../assets/logo3.png';
 
 export default function Home() {
+
   return (
 
     <div className="max-w-[1440px] min-h-screen mx-auto flex flex-col items-stretch text-white ">
@@ -57,8 +58,8 @@ export default function Home() {
 
         <div className="p-5 flex items-center">
           <Image 
-            src='https://github.com/nekuro201.png' 
-            className="rounded-full w-auto h-auto shadow-gray-800 shadow-lg brightness-90" 
+            src='nekuro201.png'
+            className="rounded-full w-auto h-auto max-h-[300px] shadow-gray-800 shadow-lg brightness-90" 
             width={200} 
             height={200} 
             alt="Guilherme Kodi Abe" 
