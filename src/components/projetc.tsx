@@ -14,9 +14,12 @@ type ProjectProps = {
 export function Project({imageBack, imageFront, children, ...props}: ProjectProps){
   return(
     <div>
-      <div className="md:mb-24 p-5 flex">
+
+      <h1 className="w-full font-baumans text-4xl tracking-[5px] text-center md:hidden">#{props.title}</h1>
+
+      <div className="md:mb-24 p-5 block md:flex">
         <div className="w-1/2 md:w-2/5 flex-none">
-          <div className="h-full w-auto flex justify-center place-items-center">
+          <div className="min-h-[200px] h-full w-auto flex md:justify-center md:place-items-center">
             
             <div className="max-w-7xl h-52 absolute -translate-x-6 -translate-y-6 md:-translate-x-16 md:-translate-y-16">
               <Image 
@@ -42,20 +45,20 @@ export function Project({imageBack, imageFront, children, ...props}: ProjectProp
           </div>
         </div>
 
-        <div className="min-h-[300px] grow">
-          <h1 className="font-baumans text-4xl tracking-[5px]">#{props.title}</h1>
+        <div className="md:min-h-[300px] flex md:items-start md:flex-col md:grow md:ml-32 mt-2">
+          <h1 className="font-baumans text-4xl tracking-[5px] hidden md:block">#{props.title}</h1>
           
-          <div className="py-5 pl-16 pr-2 md:px-28 px-2">
+          <div className="my-5 text-justify md:text-left">
             <p>{props.value}</p>
           </div>
 
-          <div className="py-5 pl-16 pr-2 md:px-28 px-2 flex gap-5 items-center invisible md:visible">
+          <div className="my-5 gap-5 items-center md:items-start hidden md:flex">
             {children}
           </div>
         </div>
       </div>
       
-      <div className="md:px-28 flex gap-5 justify-center items-center visible md:invisible">
+      <div className="my-5 gap-5 items-center justify-center flex md:hidden">
         {children}
       </div>
     </div>

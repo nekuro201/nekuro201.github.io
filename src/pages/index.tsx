@@ -5,6 +5,7 @@
 // vscode extension: postcss, tailwind
 
 import Image from 'next/image';
+import { GithubLogo, Play } from "phosphor-react";
 
 import { Line } from '../components/line';
 import { MyFeatures } from '../components/myfeatures';
@@ -13,8 +14,8 @@ import { MyLink } from '../components/link';
 
 import logoPortfolio from '../assets/logo3.png';
 import capa1png from '../assets/capa_nlwcopa.png';
-import print1png from '../assets/capagame.png';
-import print2png from '../assets/print2.png';
+import print1png from '../assets/print2.png';
+import capagame from '../assets/capagame.png';
 
 export default function Home() {
 
@@ -28,24 +29,26 @@ export default function Home() {
         <a href='#' className="hover:text-gray-500">contact</a>
       </div>
 
-      <div className="flex justify-center ">
+      <div className="flex justify-center">
         <div className="">
           <Image 
             src={logoPortfolio}
             alt="logo"
-            quality={100} 
-            className="w-32 md:w-[400px] blur-3xl opacity-100 absolute brightness-100 -translate-y-3 -translate-x-5 z-0"
+            quality={100}
+            priority={true}
+            className="w-60 md:w-[400px] shadow-2xl pb-4 rounded-full md:blur-3xl opacity-100 absolute brightness-100 -translate-y-3 -translate-x-5 -z-10"
           />
           <Image 
             src={logoPortfolio} 
             alt="logo" 
-            quality={100} 
-            className="w-32 md:w-72 z-10 drop-shadow-2xl"
+            quality={100}
+            priority={true}
+            className="w-60 md:w-72 invisible md:visible z-10"
           />
         </div>
         
         <div className="flex items-center">
-          <span className="font-baumans xs:text-3xl md:text-6xl tracking-[20px]">NEKURO DEV</span>
+          <span className="font-baumans pt-28 md:pt-0 text-2xl xs:text-3xl md:text-6xl tracking-[20px] text-center md:text-left">NEKURO DEV</span>
         </div>  
       </div>
 
@@ -84,24 +87,21 @@ export default function Home() {
         title='Projetos de alunos'
         value='Projeto desenvolvido com Html e Css para exibir uma contagem de pessoas nos eventos de volei.'
       >
-        <MyLink href='https://www.github.com/nekuro201' value="Super LINK"/>
-        <MyLink href='https://www.github.com/nekuro201' value="Super LINK"/>
-        <MyLink href='https://www.github.com/nekuro201' value="Super LINK"/>
+        <MyLink href='https://github.com/nekuro201/cblolmobile' icon={GithubLogo} value="MOBILE"/>
+        <MyLink href='https://github.com/nekuro201/cblolserver' icon={GithubLogo} value="SERVER"/>
       </Project>
 
       <Line />
 
       <Project 
-        imageBack={print2png} 
-        imageFront={print2png}
+        imageBack={print1png} 
+        imageFront={capagame}
         imageBackAlt="print do jogo"
         imageFrontkAlt="print do jogo"
         title='Onmyoudou Origins'
-        value='Jogo de aventura desenvolvido na Unity.'
+        value='Jogo de aventura com elementos de rpg, baseado em uma história nascida de um rpg de mesa mestrado por Octokortex e reescrita por Pedro Kenji Miwa e com músicas originais por Vinícius Macedo. Desenvolvido totalmente na Unity e continuo atualizando e adicionando novas mecânicas ao jogo.'
       >
-        <MyLink href='https://www.github.com/nekuro201' value="Super LINK"/>
-        <MyLink href='https://www.github.com/nekuro201' value="Super LINK"/>
-        <MyLink href='https://www.github.com/nekuro201' value="Super LINK"/>
+        <MyLink href='https://octokortex.itch.io/onmyoudou-origins' icon={Play} value="JOGAR"/>
       </Project>
       
       <div className="mt-16 pb-5 text-xs flex h-[60px] items-center justify-center pr-5 gap-10 text-gray-400 tracking-[5px] md:bg-transparent bg-black-700">
