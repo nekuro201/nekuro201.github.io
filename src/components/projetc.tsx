@@ -1,27 +1,62 @@
-import Image from "next/image";
+import React from 'react';
+import Image, { StaticImageData } from "next/image";
 
-export function Project(){
+type ProjectProps = {
+  imageBack: StaticImageData,
+  imageFront: StaticImageData,
+  imageBackAlt?: string,
+  imageFrontkAlt?: string,
+  title: string,
+  value: string,
+  children?: React.ReactNode,
+};
+
+export function Project({imageBack, imageFront, children, ...props}: ProjectProps){
   return(
-    <div className="flex w-3/4 gap-10">
-      <Image 
-        src='https://github.com/nekuro201.png' 
-        className="opacity-70 w-48 shadow-gray-800 shadow-lg" 
-        width={200} 
-        height={200} 
-        alt="Guilherme Kodi Abe" 
-      />
+    <div>
+      <div className="md:mb-24 p-5 flex">
+        <div className="w-1/2 md:w-2/5 flex-none">
+          <div className="h-full w-auto flex justify-center place-items-center">
+            
+            <div className="max-w-7xl h-52 absolute -translate-x-6 -translate-y-6 md:-translate-x-16 md:-translate-y-16">
+              <Image 
+                src={imageBack}
+                className="w-auto h-auto max-h-[150px] md:max-h-[290px] shadow-orange-300 shadow-2xl blur-md" 
+                width={500} 
+                height={500} 
+                alt={props.imageBackAlt ? props.imageBackAlt : "null"}
+                quality={100} 
+              />
+            </div>
 
-      <div>
-        <h1 className="font-baumans text-4xl tracking-[5px]"># projects</h1>
-        
-        <p className='mt-5'>
-          Olá Mundo! Eu me chamo Guilherme Kodi Abe, Sou um programador de
-          sistemas web <br/>e desenvolvedor de jogos.
-        </p>
+            <div className="max-w-7xl h-52 absolute translate-x-6 translate-y-12 md:translate-x-16 md:translate-y-16">
+              <Image 
+                src={imageFront}
+                className="w-auto h-auto max-h-[150px] md:max-h-[290px] shadow-gray-300 shadow-2xl" 
+                width={500} 
+                height={500} 
+                alt={props.imageFrontkAlt ? props.imageFrontkAlt : "null"} 
+                quality={100} 
+              />
+            </div>
+          </div>
+        </div>
 
-        <br/>
+        <div className="min-h-[300px] grow">
+          <h1 className="font-baumans text-4xl tracking-[5px]">#{props.title}</h1>
+          
+          <div className="py-5 pl-16 pr-2 md:px-28 px-2">
+            <p>{props.value}</p>
+          </div>
 
-        <a href='#'>LINK</a>
+          <div className="py-5 pl-16 pr-2 md:px-28 px-2 flex gap-5 items-center invisible md:visible">
+            {children}
+          </div>
+        </div>
+      </div>
+      
+      <div className="md:px-28 flex gap-5 justify-center items-center visible md:invisible">
+        {children}
       </div>
     </div>
   );

@@ -9,9 +9,12 @@ import Image from 'next/image';
 import { Line } from '../components/line';
 import { MyFeatures } from '../components/myfeatures';
 import { Project } from '../components/projetc';
+import { MyLink } from '../components/link';
 
 import logoPortfolio from '../assets/logo3.png';
 import capa1png from '../assets/capa_nlwcopa.png';
+import print1png from '../assets/capagame.png';
+import print2png from '../assets/print2.png';
 
 export default function Home() {
 
@@ -73,79 +76,33 @@ export default function Home() {
 
       <Line />
 
-      <div className="md:mb-24 p-5 flex">
-        <div className="w-1/2 md:w-2/5 flex-none">
-          <div className="h-full w-auto flex justify-center place-items-center">
-            
-            <div className="max-w-7xl h-52 absolute -translate-x-6 -translate-y-6 md:-translate-x-16 md:-translate-y-16">
-              <Image 
-                src={capa1png}
-                className="w-auto h-auto max-h-[150px] md:max-h-[290px] shadow-orange-300 shadow-2xl blur-md" 
-                width={500} 
-                height={500} 
-                alt="Guilherme Kodi Abe" 
-                quality={100} 
-              />
-            </div>
-
-            <div className="max-w-7xl h-52 absolute translate-x-6 translate-y-12 md:translate-x-16 md:translate-y-16">
-              <Image 
-                src={capa1png}
-                className="w-auto h-auto max-h-[150px] md:max-h-[290px] shadow-gray-300 shadow-2xl" 
-                width={500} 
-                height={500} 
-                alt="Guilherme Kodi Abe" 
-                quality={100} 
-              />
-            </div>
-          </div>
-        </div>
-
-        <div className="min-h-[300px] grow">
-          <h1 className="font-baumans text-4xl tracking-[5px]">#Projetos de alunos</h1>
-          
-          <p className="py-5 pl-15 pr-2 md:px-28 px-20">Projeto desenvolvido com Html e Css para exibir uma contagem de pessoas nos eventos de volei.</p>
-
-          <button className="py-5 pl-15 pr-2 md:px-28 px-20">LINK</button>
-        </div>
-      </div>
+      <Project 
+        imageBack={capa1png} 
+        imageFront={capa1png}
+        imageBackAlt="print do jogo"
+        imageFrontkAlt="print do jogo"
+        title='Projetos de alunos'
+        value='Projeto desenvolvido com Html e Css para exibir uma contagem de pessoas nos eventos de volei.'
+      >
+        <MyLink href='https://www.github.com/nekuro201' value="Super LINK"/>
+        <MyLink href='https://www.github.com/nekuro201' value="Super LINK"/>
+        <MyLink href='https://www.github.com/nekuro201' value="Super LINK"/>
+      </Project>
 
       <Line />
 
-      <div className="md:mb-24 p-5 flex">
-        <div className="w-1/2 md:w-2/5 flex-none">
-          <div className="h-full w-auto flex justify-center place-items-center">
-            
-            <div className="max-w-7xl h-52 absolute -translate-x-6 -translate-y-6 md:-translate-x-16 md:-translate-y-16">
-              <Image 
-                src='https://github.com/nekuro201.png'
-                className="w-auto h-auto max-h-[150px] md:max-h-[300px] shadow-gray-800 shadow-lg drop-shadow-2xl brightness-90" 
-                width={300} 
-                height={200} 
-                alt="Guilherme Kodi Abe" 
-                quality={100} 
-              />
-            </div>
-            
-            <div className="max-w-7xl h-52 absolute translate-x-6 translate-y-12 md:translate-x-16 md:translate-y-16">
-              <Image 
-                src='https://github.com/nekuro201.png'
-                className="w-auto h-auto max-h-[150px] md:max-h-[300px] shadow-gray-800 drop-shadow-2xl brightness-90" 
-                width={300} 
-                height={200} 
-                alt="Guilherme Kodi Abe" 
-                quality={100} 
-              />
-            </div>
-          </div>
-        </div>
-
-        <div className="min-h-[300px] grow">
-          <h1 className="font-baumans text-4xl tracking-[5px]">#Projetos de alunos</h1>
-          
-          <p className="pt-5 pl-10 pr-2 md:px-20 lg:px-0">Projeto desenvolvido com Html e Css para exibir uma contagem de pessoas nos eventos de volei.</p>
-        </div>
-      </div>
+      <Project 
+        imageBack={print2png} 
+        imageFront={print2png}
+        imageBackAlt="print do jogo"
+        imageFrontkAlt="print do jogo"
+        title='Onmyoudou Origins'
+        value='Jogo de aventura desenvolvido na Unity.'
+      >
+        <MyLink href='https://www.github.com/nekuro201' value="Super LINK"/>
+        <MyLink href='https://www.github.com/nekuro201' value="Super LINK"/>
+        <MyLink href='https://www.github.com/nekuro201' value="Super LINK"/>
+      </Project>
       
       <div className="mt-16 pb-5 text-xs flex h-[60px] items-center justify-center pr-5 gap-10 text-gray-400 tracking-[5px] md:bg-transparent bg-black-700">
         Guilherme Kodi Abe
