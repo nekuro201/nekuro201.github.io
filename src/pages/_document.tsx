@@ -8,8 +8,6 @@ export default function Document(){
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin=""/>
         <link href="https://fonts.googleapis.com/css2?family=Baumans&family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
         <link rel="icon" type="image/x-icon" href="/nekuro-favicon.png"></link>
-      
-        <title>Nekuro Dev</title>
       </Head>
       <body className="bg-black-700 bg-app bg-no-repeat bg-bottom bg-cover">
         <Main />

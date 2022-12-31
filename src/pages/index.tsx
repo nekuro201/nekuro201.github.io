@@ -17,18 +17,26 @@ import capa1png from '../assets/capa_nlwcopa.png';
 import print1png from '../assets/print2.png';
 import capagame from '../assets/capagame.png';
 
-export default function Home() {
+import axios from 'axios';
+
+interface HomeProps {
+  image: string,
+}
+
+export default function Home(props: HomeProps) {
 
   return (
 
     <div className="max-w-[1440px] min-h-screen mx-auto flex flex-col items-stretch text-white">
 
+      {/* HEADER */}
       <div className="flex h-[60px] items-center justify-end pr-5 gap-10 text-white tracking-[5px] md:bg-transparent bg-black-700 z-50 absolute md:relative invisible md:visible">
         <a href='#' className="hover:text-gray-500">home</a>
         <a href='#' className="hover:text-gray-500">projects</a>
         <a href='#' className="hover:text-gray-500">contact</a>
       </div>
 
+      {/* LOGO */}
       <div className="flex justify-center">
         <div className="">
           <Image 
@@ -52,6 +60,7 @@ export default function Home() {
         </div>  
       </div>
 
+      {/* ABOUT ME */}
       <div className="flex flex-col md:flex-row md:justify-between">
         <div className="pt-14 px-14 md:p-5">
           <h1 className="font-baumans text-4xl tracking-[5px]">#EU</h1>
@@ -65,7 +74,7 @@ export default function Home() {
 
         <div className="py-5 md:p-5 flex justify-center md:items-center">
           <Image 
-            src='https://github.com/nekuro201.png'
+            src={`data:image/png;base64,${props.image}`}
             className="rounded-full w-auto h-auto max-h-[100px] md:max-h-[300px] shadow-gray-800 shadow-lg brightness-90" 
             width={200} 
             height={200} 
@@ -109,5 +118,19 @@ export default function Home() {
       </div>
     </div>
   )
+}
+
+export async function getStaticProps() {
+  const { data } = await axios.get('https://github.com/nekuro201.png', {
+    responseType: 'arraybuffer'
+  });
+
+  const image = Buffer.from(data, 'binary').toString('base64');
+
+  return {
+    props: {
+      image
+    }
+  }
 }
 
