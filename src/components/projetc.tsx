@@ -18,8 +18,8 @@ export function Project({imageBack, imageFront, children, ...props}: ProjectProp
       <h1 className="w-full font-baumans text-4xl tracking-[5px] text-center md:hidden">#{props.title}</h1>
 
       <div className="md:mb-24 p-5 block md:flex">
-        <div className="w-1/2 md:w-2/5 flex-none">
-          <div className="min-h-[200px] h-full w-auto flex md:justify-center md:place-items-center">
+        <div className="w-auto md:w-2/5 flex justify-center md:flex-none">
+          <div className="min-h-[200px] h-full min-w-full flex md:justify-center md:place-items-center">
             
             <div className="max-w-7xl h-52 absolute -translate-x-6 -translate-y-6 md:-translate-x-16 md:-translate-y-16">
               <Image 
@@ -44,7 +44,7 @@ export function Project({imageBack, imageFront, children, ...props}: ProjectProp
             </div>
           </div>
         </div>
-
+        
         <div className="md:min-h-[300px] flex md:items-start md:flex-col md:grow md:ml-32 mt-2">
           <h1 className="font-baumans text-4xl tracking-[5px] hidden md:block">#{props.title}</h1>
           

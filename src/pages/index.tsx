@@ -82,10 +82,10 @@ export default function Home() {
       <Project 
         imageBack={capa1png} 
         imageFront={capa1png}
-        imageBackAlt="print do jogo"
-        imageFrontkAlt="print do jogo"
-        title='Projetos de alunos'
-        value='Projeto desenvolvido com Html e Css para exibir uma contagem de pessoas nos eventos de volei.'
+        imageBackAlt="telas do cblol bolão"
+        imageFrontkAlt="telas do cblol bolão"
+        title='CBLOL BOLÃO'
+        value='Projeto desenvolvido com React Native onde o usuário pode criar um grupo e convidar seus amigos para se divertir lançando seus palpites dos resultados finais dos jogos de League of Legends. Projeto de portifolio baseado no projeto de estudo NLW Bolão da RocketSeat.'
       >
         <MyLink href='https://github.com/nekuro201/cblolmobile' icon={GithubLogo} value="MOBILE"/>
         <MyLink href='https://github.com/nekuro201/cblolserver' icon={GithubLogo} value="SERVER"/>
