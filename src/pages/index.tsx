@@ -115,13 +115,15 @@ export default function Home(props: HomeProps) {
         <MyLink href='https://octokortex.itch.io/onmyoudou-origins' icon={Play} value="JOGAR"/>
       </Project>
 
+      <Line />
+
       <Project 
         imageBack={berryCherry1} 
         imageFront={berryCherry2}
         imageBackAlt="print do jogo"
         imageFrontkAlt="print do jogo"
         title='Berry Cherry'
-        value='aaa'
+        value='Jogo de perguntas desenvolvido com Octokortex para um evento de GameJam. Desenvolvido com Unity.'
       >
         <MyLink href='https://octokortex.itch.io/berrycherry' icon={Play} value="JOGAR"/>
       </Project>
