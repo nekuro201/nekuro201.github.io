@@ -16,6 +16,8 @@ import logoPortfolio from '../assets/logo3.png';
 import capa1png from '../assets/capa_nlwcopa.png';
 import print1png from '../assets/print2.png';
 import capagame from '../assets/capagame.png';
+import berryCherry1 from '../assets/berryCherry1.png';
+import berryCherry2 from '../assets/berryCherry2.png';
 
 import axios from 'axios';
 
@@ -111,6 +113,17 @@ export default function Home(props: HomeProps) {
         value='Jogo de aventura com elementos de rpg, baseado em uma história nascida de um rpg de mesa mestrado por Octokortex e reescrita por Pedro Kenji Miwa e com músicas originais por Vinícius Macedo. Desenvolvido totalmente na Unity e continuo atualizando e adicionando novas mecânicas ao jogo.'
       >
         <MyLink href='https://octokortex.itch.io/onmyoudou-origins' icon={Play} value="JOGAR"/>
+      </Project>
+
+      <Project 
+        imageBack={berryCherry1} 
+        imageFront={berryCherry2}
+        imageBackAlt="print do jogo"
+        imageFrontkAlt="print do jogo"
+        title='Berry Cherry'
+        value='aaa'
+      >
+        <MyLink href='https://octokortex.itch.io/berrycherry' icon={Play} value="JOGAR"/>
       </Project>
       
       <div className="mt-16 pb-5 text-xs flex h-[60px] items-center justify-center pr-5 gap-10 text-gray-400 tracking-[5px] md:bg-transparent bg-black-700">
