@@ -11,24 +11,25 @@ on:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     strategy:
       matrix:
-        node-version: [14.x]
+        # Consider updating to a newer LTS version like "18.x" or "20.x" if your project supports it.
+        # Node.js 14.x is no longer actively maintained.
+        node-version: [14.x] 
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4 # Updated to v4
     - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v3
+      uses: actions/setup-node@v4 # Updated to v4
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
     - run: npm ci
     - run: npm run build
-    - run: npm run export
+    - run: npm run export # This seems to be a Next.js specific command for static export
     - run: touch ./out/.nojekyll
     
     - name: Deploy 🚀
